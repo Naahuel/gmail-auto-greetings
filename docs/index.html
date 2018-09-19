@@ -6,13 +6,79 @@
   <title>Gmail Auto Greet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    *{margin:0; padding:0; box-sizing:border-box;}
+    body{
+      background: #00B4DB;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    body, html{
+      padding: 0;
+      margin: 0;
+      color: #FFF;
+    }
+    *{box-sizing:border-box;}
+    .wrap{
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .bookmarklet {
+      -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+      -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+      box-shadow:inset 0px 1px 0px 0px #ffffff;
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+      background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+      background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+      background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+      background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+      background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+      background-color:#f9f9f9;
+      -moz-border-radius:6px;
+      -webkit-border-radius:6px;
+      border-radius:6px;
+      border:1px solid #dcdcdc;
+      display:inline-block;
+      cursor:pointer;
+      color:#666666;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #ffffff;
+    }
+    .bookmarklet:hover {
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+      background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+      background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+      background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+      background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+      background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+      background-color:#e9e9e9;
+    }
+    .bookmarklet:active {
+      position:relative;
+      top:1px;
+    }
+
   </style>
 </head>
 <body>
+  <a href="https://github.com/Naahuel/gmail-auto-greetings"><img style="position: absolute; top: 0; left: 0; border: 0;" src="formke.png" alt="Fork me on GitHub"></a>
   <div class="wrap">
-    <h1>Bookmarklet:</h1>
-    <a class="button" href="javascript:!function(){(function(e){var%20n=e.querySelector(%22[data-message-id]%20span[email]%22),r=e.querySelector(%22.editable[contenteditable]%22);r%26%26(r.innerHTML=%22Hi%20%25s!%22.replace(%22%25s%22,n.innerText)+%22%3Cbr%3E%3Cbr%3E%22+r.innerHTML)})(document)}();">Gmail Auto Greet</a>
+    <h1>Gmail Auto Greet Bookmarklet:</h1>
+    <p>Drag the bookmarklet to your bookmarks bar:</p>
+    <p><a class="bookmarklet" class="button" href="javascript:!function(){(function(e){var%20n=e.querySelector(%22[data-message-id]%20span[email]%22),r=e.querySelector(%22.editable[contenteditable]%22);r%26%26(r.innerHTML=%22Hi%20%25s!%22.replace(%22%25s%22,n.innerText)+%22%3Cbr%3E%3Cbr%3E%22+r.innerHTML)})(document)}();">Gmail Auto Greet</a></p>
+
+    <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Gmail Labs idea: When hitting reply on any email, the first line automatically populates: [greeting] [original senders first name] where you can customize greeting in settings. Will be great to prevent typos and difficult names, example: <a href="https://t.co/vePex3mS5I">pic.twitter.com/vePex3mS5I</a></p>&mdash; Rob Hope 🇿🇦 (@robhope) <a href="https://twitter.com/robhope/status/1042355945609854978?ref_src=twsrc%5Etfw">19 de septiembre de 2018</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </body>
 </html>
