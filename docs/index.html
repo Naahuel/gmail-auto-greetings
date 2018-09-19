@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gmail Auto Greet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Bookmarklet:</h1>
+    <a class="button" href="javascript:!function(){(function(e){var%20n=e.querySelector(%22[data-message-id]%20span[email]%22),r=e.querySelector(%22.editable[contenteditable]%22);r%26%26(r.innerHTML=%22Hi%20%25s!%22.replace(%22%25s%22,n.innerText)+%22%3Cbr%3E%3Cbr%3E%22+r.innerHTML)})(document)}();">Gmail Auto Greet</a>
+  </div>
+</body>
+</html>
