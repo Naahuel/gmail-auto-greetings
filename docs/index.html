@@ -27,6 +27,9 @@
       align-items: center;
       height: 100vh;
     }
+    li{
+      line-height: 1.6em;
+    }
     .bookmarklet {
       -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
       -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -44,6 +47,8 @@
       border-radius:6px;
       border:1px solid #dcdcdc;
       display:inline-block;
+      vertical-align: middle;
+      line-height: 1.2em;
       cursor:pointer;
       color:#666666;
       font-family:Arial;
@@ -67,15 +72,24 @@
       position:relative;
       top:1px;
     }
-
+    .bookmarklet img{
+      width: 1em;
+      height: auto;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
   <a href="https://github.com/Naahuel/gmail-auto-greetings"><img style="position: absolute; top: 0; left: 0; border: 0;" src="formke.png" alt="Fork me on GitHub"></a>
   <div class="wrap">
     <h1>Gmail Auto Greet Bookmarklet:</h1>
-    <p>Drag the bookmarklet to your bookmarks bar:</p>
-    <p><a class="bookmarklet" class="button" href="javascript:!function(){(function(e){var%20n=e.querySelector(%22[data-message-id]%20span[email]%22),r=e.querySelector(%22.editable[contenteditable]%22);r%26%26(r.innerHTML=%22Hi%20%25s!%22.replace(%22%25s%22,n.innerText)+%22%3Cbr%3E%3Cbr%3E%22+r.innerHTML)})(document)}();">Gmail Auto Greet</a></p>
+    <ol>
+        <li>Drag the bookmarklet to your bookmarks bar.</li>
+        <li>Open your email, click reply, click the bookmark.</li>
+        <li>...</li>
+        <li>Profit</li>
+    </ol>
+    <p><a class="bookmarklet" class="button" href="javascript:!function(){(function(e){var%20n=e.querySelector(%22[data-message-id]%20span[email]%22),r=e.querySelector(%22.editable[contenteditable]%22);r%26%26(r.innerHTML=%22Hi%20%25s!%22.replace(%22%25s%22,n.innerText)+%22%3Cbr%3E%3Cbr%3E%22+r.innerHTML)})(document)}();"><img src="gmail.png" alt="Gmail Auto Greet"> Gmail Auto Greet</a></p>
 
     <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Gmail Labs idea: When hitting reply on any email, the first line automatically populates: [greeting] [original senders first name] where you can customize greeting in settings. Will be great to prevent typos and difficult names, example: <a href="https://t.co/vePex3mS5I">pic.twitter.com/vePex3mS5I</a></p>&mdash; Rob Hope 🇿🇦 (@robhope) <a href="https://twitter.com/robhope/status/1042355945609854978?ref_src=twsrc%5Etfw">19 de septiembre de 2018</a></blockquote>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
